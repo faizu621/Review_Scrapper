@@ -73,6 +73,8 @@ GET http://localhost:3000/reviews?search=zoom&startDate=2023-01-01&endDate=2023-
 **Visual Output Reference:**
 
 ![Sample Output Screenshot](attachments/output-screenshot.png)
+<img width="1315" height="940" alt="image" src="https://github.com/user-attachments/assets/ad70582f-2dc8-484a-a8ad-1567142d5149" />
+
 
 *See the screenshot above for how reviews are displayed in the app (JSON cards with color highlighting and pagination).* 
 
