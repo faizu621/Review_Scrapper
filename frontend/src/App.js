@@ -17,7 +17,7 @@ export default function App() {
       if (startDate) params.append('startDate', startDate);
       if (endDate) params.append('endDate', endDate);
       if (source) params.append('source', source);
-      const res = await axios.get(`http://localhost:3000/reviews?${params.toString()}`);
+      const res = await axios.get(`http://localhost:5000/reviews?${params.toString()}`);
       setReviews(res.data);
     } catch(e){
       console.error(e);

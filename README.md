@@ -37,7 +37,55 @@ This is a full-stack MERN application for scraping, storing, and viewing softwar
 	```
 3. The frontend runs at `http://localhost:3000` (or another port if 3000 is in use).
 
-## API Usage
+# MERN Review App
+
+<p align="center">
+	<img src="attachments/output-screenshot.png" alt="Sample Output Screenshot" width="700" />
+</p>
+
+<br>
+
+This project is a full-stack MERN application for scraping, storing, and viewing software reviews from multiple sources (G2, Capterra) using Apify actors and custom crawlers.
+
+---
+
+## 📁 Folder Structure
+- **backend/** : Express API, Apify actor integration, custom scrapers
+- **frontend/**: React app for searching and displaying reviews
+- **pythoncode/**: (Optional) Python scrapper
+
+## 🚀 Quick Start
+
+### Backend Setup
+1. Copy `.env.example` to `.env` and set your `APIFY_TOKEN` (for Apify integration).
+2. Install dependencies:
+	 ```bash
+	 cd backend
+	 npm install
+	 ```
+3. Start the backend server:
+	 ```bash
+	 npm run dev
+	 # or
+	 node serverapify.js
+	 ```
+4. The backend runs at `http://localhost:3000` (default).
+
+### Frontend Setup
+1. Install dependencies:
+	 ```bash
+	 cd frontend
+	 npm install
+	 ```
+2. Start the React app:
+	 ```bash
+	 npm start
+	 ```
+3. The frontend runs at `http://localhost:3000` (or another port if 3000 is in use).
+
+---
+
+## 🔗 API Usage
 
 ### Fetch Reviews (Postman Example)
 **Endpoint:**
@@ -47,7 +95,6 @@ GET http://localhost:3000/reviews?search=zoom&startDate=2023-01-01&endDate=2023-
 **Query Parameters:**
 - `search`: Product name (e.g., "zoom", "stripe")
 - `startDate`, `endDate`: (optional) Filter reviews by date
-
 
 **Sample JSON Output:**
 ```json
@@ -65,28 +112,32 @@ GET http://localhost:3000/reviews?search=zoom&startDate=2023-01-01&endDate=2023-
 		"date": "February 13, 2025",
 		"rating": "2.0",
 		"description": "Very bad support experience."
-	},
+	}
 	// ...more reviews
 ]
 ```
 
-**Visual Output Reference:**
+<details>
+	<summary>Visual Output Reference</summary>
+	<img src="attachments/output-screenshot.png" alt="Sample Output Screenshot" width="700" />
+	<br>
+	<em>Reviews are displayed as JSON cards with color highlighting and pagination.</em>
+</details>
 
-![Sample Output Screenshot](attachments/output-screenshot.png)
-<img width="1315" height="940" alt="image" src="https://github.com/user-attachments/assets/ad70582f-2dc8-484a-a8ad-1567142d5149" />
+---
 
-
-*See the screenshot above for how reviews are displayed in the app (JSON cards with color highlighting and pagination).* 
-
-## Third Source Integration (Bonus)
+## 🏆 Third Source Integration (Bonus)
 
 - The backend integrates with an **Apify actor** to scrape reviews from G2 and Capterra dynamically.
 - To use the third source, ensure your Apify token is set in `.env` and the actor is deployed on Apify.
 - The API will trigger the actor, poll for results, and return reviews in JSON format.
 - For custom scraping, see `backend/controller/scraper.js` and `backend/apifymain.js`.
 
-## More Info
-- See `backend/README.md` and `frontend/README.md` for advanced setup, environment variables, and troubleshooting.
+---
+
+## 📚 More Info
+- See [`backend/README.md`](backend/README.md) and [`frontend/README.md`](frontend/README.md) for advanced setup, environment variables, and troubleshooting.
 
 ---
+
 **Contact:** For issues or questions, open an issue or contact the author.

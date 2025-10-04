@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors());
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 // Replace with your values
 //const ACTOR_ID = "impassioned_wildfire~my-actor"; 

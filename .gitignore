@@ -1,4 +1,35 @@
-node_modules
+
+# Node dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Environment and secrets
 .env
-/dist
-/client/node_modules
+backend/.env
+
+# Build and cache
+dist/
+client/node_modules/
+
+# Apify/actor local files
+backend/storage/
+backend/.actor/
+
+# System files
+*.log
+*.DS_Store
+Thumbs.db
+
+# Python virtual environment (if used)
+.venv/
+
+# Lock files (optional, if you want to ignore)
+# package-lock.json
+
+# Misc
+backend/g2_debug.png
+backend/g2_reviews_debug_page1.html
+backend/g2_search_debug.html
+backend/search_debug.html
+
